@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   const codeScanner = useCodeScanner({
-    codeTypes: ['qr', 'ean-13'],
+    codeTypes: ['qr','upc-a','ean-13','code-128'],
     onCodeScanned: (codes: Code[]) => {
       // Update the state with the latest scanned data
       setLatestScannedData(codes[0].value);
